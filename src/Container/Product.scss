@@ -1,0 +1,185 @@
+.body{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    &-add{
+        
+        bottom: 10px;
+        right: 10px;
+        font-size: 60px;
+        color: #007fff;
+        position: fixed;
+        transition: transform .1s ease-in;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    &-card{
+        width: 250px;
+        background-color: white;
+       margin: 20px 5px;
+       border-radius: 10px;
+       position: relative;
+       border: 1px solid gainsboro;
+      
+       
+
+     &-circle{
+        position: absolute;
+        top: 36%;
+        right: 15px;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        box-shadow: 0  1px 2px rgb(85, 80, 80);
+        
+        &-heart{
+          
+            
+            font-size: 30px;  
+            transition: all .1s;
+            cursor: pointer;
+    
+          
+    
+            &:hover{
+                color: #007fff;
+                transform: scale(1.1);
+            }
+           }
+     }
+       
+       
+
+       &-img{
+        width: 100%;
+        height: 180px;
+        background-position:center;
+        background-size:cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        
+       
+       }
+
+       &-details{
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &-desc{
+            font-size: 20px;
+            font-weight: 700;
+            
+            
+        }
+
+        &-edit{
+            background-color: #007fff;
+            text-align: center;
+            padding: 10px 0px;
+            color: white;
+            cursor: pointer;
+        }
+
+        &-price{
+            font-size: 20px;
+            color:  #007fff;
+            font-weight: 700;
+        }
+        &-date{
+           
+            display: flex;
+            align-items: center;
+            color: gray;
+            &-icon{
+               margin-right: 5px;
+            }
+        }
+       }
+      
+    }
+}
+
+.loading{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 1;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.admin{
+
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+   justify-content:center;
+   width: fit-content;
+   
+   height: 200px;
+   margin: 20px auto;
+    &-input{
+        outline: none;
+        border-style: none;
+        height: 30px;
+        border: .5px solid gray;
+
+    }
+    &-button{
+        font-size: 20px;
+        padding: 10px 15px;
+        background-color: #007fff;
+        border-style: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        display: block;
+        margin-top: 10px;
+        
+    }
+}
+
+.main-option-back{
+    font-size: 25px;
+    padding: 5px 5px;
+    transition: transform .1s ease-in;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .body{
+
+        &-card{
+            flex-basis: 100%;
+
+            &-circle{
+                top: 45%;
+            }
+            &-img{
+                height: 250px;
+            }
+        }
+    }
+    
+}

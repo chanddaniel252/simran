@@ -1,0 +1,110 @@
+.header{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 25px;
+    border-bottom: 2px solid gainsboro;
+
+    &-title{
+        color: #007fff;
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family:cursive;
+      
+        
+    }
+
+    &-left{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+       
+        width: 100px;
+
+         color: #007fff;
+         cursor: pointer;
+
+         &-user{
+          position: absolute;
+          background-color: #007fff;
+          top: 40px;
+          width: 200px;
+          right: 5px;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          z-index: 1;
+         }
+         &-items{
+          background-color: #007fff;
+          z-index: 1;
+          position: absolute;
+          top: 40px;
+          width: 200px;
+          right: 65px;
+          color: white;
+          display: flex;
+          flex-direction: column;
+         
+          
+        }
+  
+        &-cart{
+          
+          font-size: 40px;
+          transition:  transform .1s linear;
+
+          &:hover{
+            transform: scale(1.1);
+          }
+
+         
+          
+          
+        }
+        &-cart2{
+          
+          font-size: 40px;
+           animation: animate 2s linear infinite;
+         
+          
+          
+        }
+        &-setting{
+          font-size: 35px;
+          transition:  transform .1s linear;
+          &:hover{
+            transform: scale(1.1);
+          }
+        
+        }
+      
+    }
+
+ 
+ }
+
+ @keyframes animate {
+  
+  0% {transform:  scale(1); color: #007fff;}
+  50% {transform: scale(1.1); color: #657b91;}
+ }
+
+ 
+
+@media screen and (max-width:600px) {
+
+ 
+.header{
+
+  
+}
+    
+}
+

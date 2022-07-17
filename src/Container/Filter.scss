@@ -1,0 +1,70 @@
+.filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid gainsboro;
+
+    &-1{
+        cursor: pointer;
+        padding: 10px 0px;
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background-color: #007fff;
+            transition: transform .1s linear;
+            transform: translateX(-100%);
+
+        }
+        
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right:0;
+            width: 50%;
+            height: 2px;
+            background-color: #007fff;
+            transition: transform .1s linear;
+            transform: translateX(100%);
+
+
+        }
+        &:hover::before{
+            transform: translateX(0);
+        }
+        &:hover::after{
+            transform: translateX(0);
+        }
+    }
+  
+}
+
+@media screen and (max-width:600px) {
+    .filter{
+        flex-wrap: wrap;
+      
+       
+        &-1{
+            
+            flex-basis: 30%;
+           
+
+            
+        }
+    }
+    
+}
